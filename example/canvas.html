@@ -6,9 +6,7 @@
 		<title></title>
 		<script src="../js/merge.js"></script>
 		<script>
-			var merge = new Merge()
-			var str = '在图片上合成文字'
-			merge.getImage('1.jpg', str, function(img){
+			Merge.getImage({'imgUrl':'1.jpg','words':'合成文字图片'},function(img){
 				console.log(img)
 			})
 		</script>
