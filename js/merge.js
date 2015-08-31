@@ -9,6 +9,7 @@ var Merge = (function() {
 		options
 
 	var getImage = function(newOptions, callback) {
+
 			options = _extend(defaults, newOptions)
 
 			if (!options.imgUrl && !options.words) {
@@ -16,17 +17,17 @@ var Merge = (function() {
 				return
 			}
 
-			var _this = this,
-				newImg = new Image()
-
+			var newImg = new Image()
 			newImg.src = options.imgUrl
 			newImg.onload = function() {
-				var ratio = this.width / 800
-				var width = 800,
+				var width = options.width ? options.width : this.width,
+					ratio = this.width / width,
 					height = this.height / ratio
+
 				var canvas = document.createElement('canvas')
 				canvas.width = width
 				canvas.height = height
+
 				var ctx = canvas.getContext('2d')
 				ctx.drawImage(this, 0, 0, width, height)
 					//绘制矩形背景
@@ -97,11 +98,7 @@ var Merge = (function() {
 
 				for (var newKey in newOpts) {
 					for (var oldKey in defaultOpts) {
-						if (newKey == oldKey) {
-							defaultOpts[newKey] = newOpts[newKey]
-						} else {
-							defaultOpts[newKey] = newOpts[newKey]
-						}
+						defaultOpts[newKey] = newOpts[newKey]
 					}
 				}
 
