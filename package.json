@@ -1,0 +1,35 @@
+{
+  "name": "merge-image",
+  "description": "利用canvas在图片上合成文字，文字内容可根据图片宽度自适应",
+  "version": "1.0.0",
+  "main": "dist/merge-image.min.js",
+  "scripts": {
+    "start": "gulp --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngluo/merge-image.git"
+  },
+  "keywords": [
+    "merge",
+    "image"
+  ],
+  "author": "Young Luo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngluo/merge-image/issues"
+  },
+  "homepage": "https://github.com/youngluo/merge-image#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gulp-eagle": "^2.1.1",
+    "gulp-imports": "^0.0.3",
+    "gulp-umd": "^0.2.1"
+  }
+}

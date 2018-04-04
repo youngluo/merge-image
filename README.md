@@ -1,23 +1,36 @@
-# merge
-##### 简介
-  通过html5 canvas实现在图片添加文字，文字下面的背景层可根据文字的高度自动伸缩，文字默认添加在图片底层，可根据图片的宽度自动换行。
-##### 方法
-getImage(obj, callback)
-##### 示例
+# merge-image
+
+> 利用canvas在图片上合成文字，文字内容可根据图片宽度自适应。
+
+## 使用
+
   ```
-    Merge.getImage({
-				'imgUrl': '1.jpg',
-				'words': '合成文字图片',
-				'width': 1000
-			}, function(img) {
-				console.log(img)
-			})
+    <img id="img" src="" />
+    <script src="../dist/merge-image.min.js"></script>
+    <script>
+      new MergeImage(
+        {
+          text: '关关雎鸠，在河之洲。窈窕淑女，君子好逑。参差荇菜，左右流之。窈窕淑女，寤寐求之。',
+          imgUrl: 'demo.jpg',
+          width: 480,
+        },
+        function (dataURL) {
+          document.getElementById('img').src = dataURL
+        }
+      )
+    </script>
   ```
-##### 参数
-* imgUrl：*（必选）*被合成的图片路径
-* words：*（必选）*需要合成的文字
-* width：*（可选）*设置生成图片的宽度，默认为图片原始大小（高度自适应）
-* fontSize：*（可选）*设置文字大小，默认为14px
-* padding：*（可选）*设置文字与背景层的padding值，默认为5
-* lineHeight：*（可选）*设置文字的lineHeigh值，默认为20
-* callback：*（必选）*接收合成图片的回调
+
+## options
+
+* imgUrl：*（必选）* 图片路径
+* text：*（必选）* 文字内容
+* width：*（可选）* 合成的图片宽度，默认为图片原始大小（高度自适应）
+* backgroundColor*（可选）* 背景层颜色，默认为`rgba(0, 0, 0, .7)`
+* padding：*（可选）* 文字相对背景层的padding值，默认为5
+* lineHeight：*（可选）* 文字的lineHeigh值，默认为20
+* fontSize：*（可选）* 文字大小，默认为14px
+* color*（可选）* 文字颜色，默认为`#fff`
+
+## callback(dataURL)
+  * dataURL：合成图片的dataURL

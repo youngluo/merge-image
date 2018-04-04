@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>merge-image</title>
+  <style>
+    body {
+      margin: 0
+    }
+
+    img {
+      display: block;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="img" src="" />
+  <script src="../dist/merge-image.min.js"></script>
+  <script>
+    new MergeImage(
+      {
+        text: '关关雎鸠，在河之洲。窈窕淑女，君子好逑。参差荇菜，左右流之。窈窕淑女，寤寐求之。',
+        imgUrl: 'demo.jpg',
+        width: 480,
+      },
+      function (dataURL) {
+        document.getElementById('img').src = dataURL
+      }
+    )
+  </script>
+</body>
+
+</html>
