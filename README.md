@@ -2,6 +2,10 @@
 
 > 利用canvas在图片上合成文字，文字内容可根据图片宽度自适应。
 
+## 示例
+
+[点击查看](http://youngluo.github.io/merge-image/example)
+
 ## 使用
 
   ```
@@ -30,7 +34,7 @@
 * padding：*（可选）* 文字相对背景层的padding值，默认为5
 * lineHeight：*（可选）* 文字的lineHeigh值，默认为20
 * fontSize：*（可选）* 文字大小，默认为14px
-* color*（可选）* 文字颜色，默认为`#fff`
+* color *（可选）* 文字颜色，默认为`#fff`
 
 ## callback(dataURL)
   * dataURL：合成图片的dataURL
