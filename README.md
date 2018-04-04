@@ -30,7 +30,7 @@
 * imgUrl：*（必选）* 图片路径
 * text：*（必选）* 文字内容
 * width：*（可选）* 合成的图片宽度，默认为图片原始大小（高度自适应）
-* backgroundColor*（可选）* 背景层颜色，默认为`rgba(0, 0, 0, .7)`
+* backgroundColor *（可选）* 背景层颜色，默认为`rgba(0, 0, 0, .7)`
 * padding：*（可选）* 文字相对背景层的padding值，默认为5
 * lineHeight：*（可选）* 文字的lineHeigh值，默认为20
 * fontSize：*（可选）* 文字大小，默认为14px
